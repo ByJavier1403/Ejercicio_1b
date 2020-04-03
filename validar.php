@@ -9,23 +9,37 @@
 	<body>
 		<p><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fc%2Fca%2FWalmart_logo.svg%2F1280px-Walmart_logo.svg.png&f=1&nofb=1" align="middle" width="200" height="75" class="center"></p>
 		<?php
-			$productos = ['Lamina de 8cm X 10 cm, calibre 22', 'Cordon flex 5mts', 'Led blanco brillante industrial'];
+			$productos = ['Lamina de 8cm X 10cm', 'Cordon flex 5mts', 'Led blanco brillante'];
 			$precio = [580,380,10];
 			$descuento = [0.05,0.03,0.02];
-			$aux="";
+			$aux=0;
 			if(isset($_POST['boton1'])) $aux = 0;
 			if(isset($_POST['boton2'])) $aux = 1;
 			if(isset($_POST['boton3'])) $aux = 2;
+			print_r("El cliente: ");
 			echo '<script>let name= prompt("Ingrese su nombre");
 			document.write(name);</script>';
+			print_r(" tiene una cuenta de:<br/>");
 		?>
 		<table class="table">
 			<thead class="thead-dark">
 				<tr>
-					<th scope="col">Nombre</th> 
-					<th scope="col">Precio</th> 
+					<th scope="col">Nombre</th>
+					<th scope="col">Precio</th>
 				</tr>
 			</thead>
+			<tr>
+			<td><?php echo $productos[$aux]; ?></td>
+			<td><?php echo $precio[$aux]; ?></td>
+			</tr>
+			<tr>
+			<td><?php echo 'IVA'; ?></td>
+			<td><?php $iva= $precio[$aux]* 0.16; echo $iva; ?></td>
+			</tr>
+			<tr>
+			<td><?php echo 'TOTAL'; ?></td>
+			<td><?php $total = $precio[$aux] + $iva; echo $total; ?></td>
+			</tr>
 		</table>
 	</body>
 </html>
