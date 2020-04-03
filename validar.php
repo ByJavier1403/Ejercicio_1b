@@ -21,30 +21,32 @@
 			document.write(name);</script>';
 			print_r(" tiene una cuenta de:<br/>");
 		?>
-		<table class="table">
-			<thead class="thead-dark">
+		<div id="main-container">
+			<table class="table">
+				<thead class="thead-dark">
+					<tr>
+						<th scope="col">Nombre</th>
+						<th scope="col">Precio</th>
+					</tr>
+				</thead>
 				<tr>
-					<th scope="col">Nombre</th>
-					<th scope="col">Precio</th>
+				<td><?php echo $productos[$aux]; ?></td>
+				<td><?php echo $precio[$aux]; ?></td>
 				</tr>
-			</thead>
-			<tr>
-			<td><?php echo $productos[$aux]; ?></td>
-			<td><?php echo $precio[$aux]; ?></td>
-			</tr>
-			<tr>
-			<td><?php echo 'DESCUENTO' ?></td>
-			<td><?php $des=$descuento[$aux] * $precio[$aux]; echo $des; ?></td>
-			</tr>
-			<tr>
-			<td><?php echo 'IVA'; ?></td>
-			<td><?php $iva= $precio[$aux]* 0.16; echo $iva; ?></td>
-			</tr>
-			<tr>
-			<td><?php echo 'TOTAL'; ?></td>
-			<td><?php $total = $precio[$aux] + $iva - $des; echo $total; ?></td>
-			</tr>
-		</table>
+				<tr>
+				<td><?php echo 'DESCUENTO' ?></td>
+				<td><?php $des=$descuento[$aux] * $precio[$aux]; echo $des; ?></td>
+				</tr>
+				<tr>
+				<td><?php echo 'IVA'; ?></td>
+				<td><?php $iva= $precio[$aux]* 0.16; echo $iva; ?></td>
+				</tr>
+				<tr>
+				<td><?php echo 'TOTAL'; ?></td>
+				<td><?php $total = $precio[$aux] + $iva - $des; echo $total; ?></td>
+				</tr>
+			</table>
+		</div>
 		<footer><i>Hernández Estrada Javier David 4AMP <br/> Practica 1b, programa de facturación de 1 producto php y html</i></footer>
 	</body>
 </html>

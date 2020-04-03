@@ -20,6 +20,37 @@ footer {
   color: black;
 }
 
+#main-container{
+	width: 150px auto;
+	margin-right: 600px;
+	margin-left: 600px;
+}
+
+table{
+	width: 100%;
+	background-color: white;
+	text-align: left;
+	border-collapse: collapse;
+}
+
+th , td{
+	padding: 20px;
+}
+
+thead{
+	background-color: #246355;
+	color: white;
+	border-bottom: solid 5px #0F362D;
+}
+
+tr:nth-child(even){
+	background-color: #ddd;
+}
+
+tr:hover td{
+	background-color: #369681;
+}
+
 .title{
 	text-align: center;
 	font-size: 40px;
