@@ -45,5 +45,6 @@
 			<td><?php $total = $precio[$aux] + $iva - $des; echo $total; ?></td>
 			</tr>
 		</table>
+		<footer><i>Hernández Estrada Javier David 4AMP <br/> Practica 1b, programa de facturación de 1 producto php y html</i></footer>
 	</body>
 </html>

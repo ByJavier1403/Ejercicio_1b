@@ -11,6 +11,15 @@ body{
 	line-height: 1.6;
 }
 
+footer {
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  color: black;
+}
+
 .title{
 	text-align: center;
 	font-size: 40px;
