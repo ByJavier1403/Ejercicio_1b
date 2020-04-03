@@ -33,12 +33,16 @@
 			<td><?php echo $precio[$aux]; ?></td>
 			</tr>
 			<tr>
+			<td><?php echo 'DESCUENTO' ?></td>
+			<td><?php $des=$descuento[$aux] * $precio[$aux]; echo $des; ?></td>
+			</tr>
+			<tr>
 			<td><?php echo 'IVA'; ?></td>
 			<td><?php $iva= $precio[$aux]* 0.16; echo $iva; ?></td>
 			</tr>
 			<tr>
 			<td><?php echo 'TOTAL'; ?></td>
-			<td><?php $total = $precio[$aux] + $iva; echo $total; ?></td>
+			<td><?php $total = $precio[$aux] + $iva - $des; echo $total; ?></td>
 			</tr>
 		</table>
 	</body>
